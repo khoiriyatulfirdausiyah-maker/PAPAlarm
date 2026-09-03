@@ -6,7 +6,7 @@
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="🌷 Simpan foto bukti\n\n◉ Jangan simpan (disarankan)\n○ Simpan ke penyimpanan aplikasi" android:textSize="15sp" android:textColor="@color/forest_text"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="💤 Snooze default\n\n◉ 5 menit\n○ 10 menit" android:textSize="15sp" android:textColor="@color/forest_text"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="🎨 Tema\nPastel 🌸" android:textSize="15sp" android:textColor="@color/forest_text"/>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="☁️ Backup & Restore\nSegera hadir" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="☁️ Backup &amp; Restore\nSegera hadir" android:textSize="15sp" android:textColor="@color/forest_text"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="💗 Tentang PAPAlarm\nAlarm rutinitas yang harus PAP dulu ✨" android:textSize="15sp" android:textColor="@color/forest_text"/>
 </LinearLayout>
 </ScrollView>
