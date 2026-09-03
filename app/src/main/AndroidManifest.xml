@@ -25,6 +25,8 @@
             android:showWhenLocked="true"
             android:turnScreenOn="true" />
 
+        <activity android:name=".SettingsActivity" android:exported="false" />
+
         <activity
             android:name=".AddAlarmActivity"
             android:exported="false" />

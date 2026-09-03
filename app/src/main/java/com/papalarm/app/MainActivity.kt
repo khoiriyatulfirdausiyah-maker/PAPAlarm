@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         b.recycler.layoutManager = LinearLayoutManager(this)
         b.recycler.adapter = adapter
         b.btnAdd.setOnClickListener { startActivity(Intent(this, AddAlarmActivity::class.java)) }
+        b.btnSettings.setOnClickListener { startActivity(Intent(this, SettingsActivity::class.java)) }
         requestNeededPermissions()
     }
 
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val alarms = AlarmStore.load(this)
         adapter.submit(alarms)
         val active = alarms.count { it.enabled }
-        b.tvSummary.text = if (alarms.isEmpty()) "Belum ada yang ngingetin kamu ✨" else "$active alarm aktif • tahan kartu untuk hapus"
+        b.tvSummary.text = if (alarms.isEmpty()) "🌙 Belum ada yang ngingetin kamu hari ini" else "✅ $active aktif   •   🌷 ${alarms.size} total   •   tahan kartu untuk hapus"
     }
 
     private fun requestNeededPermissions() {

@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cream">
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alarm baru 🌷" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+    <TextView android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="←  Tambah Alarm" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Waktu" android:textStyle="bold" android:textColor="@color/forest_text"/>
     <TimePicker android:id="@+id/timePicker" android:layout_width="match_parent" android:layout_height="wrap_content" android:timePickerMode="spinner"/>
-    <EditText android:id="@+id/etLabel" android:layout_width="match_parent" android:layout_height="56dp" android:hint="Nama rutinitas, mis. Skincare malam" android:background="@drawable/bg_card" android:paddingHorizontal="16dp"/>
-    <Spinner android:id="@+id/spCategory" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp" android:background="@drawable/bg_card"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Ulangi pada" android:textStyle="bold" android:textColor="@color/forest_text"/>
-    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
-            <CheckBox android:id="@+id/d1" android:text="Sen" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d2" android:text="Sel" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d3" android:text="Rab" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d4" android:text="Kam" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d5" android:text="Jum" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d6" android:text="Sab" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <CheckBox android:id="@+id/d7" android:text="Min" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ulangi" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+      <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+        <CheckBox android:id="@+id/d1" android:text="Sen" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d2" android:text="Sel" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d3" android:text="Rab" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d4" android:text="Kam" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d5" android:text="Jum" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d6" android:text="Sab" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <CheckBox android:id="@+id/d7" android:text="Min" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+      </LinearLayout>
     </HorizontalScrollView>
-    <Button android:id="@+id/btnRecord" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="18dp" android:background="@drawable/bg_button_lav" android:text="🎙 Rekam suara sendiri" android:textAllCaps="false"/>
-    <Button android:id="@+id/btnPickAudio" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:text="🎵 Pilih audio dari HP" android:textAllCaps="false"/>
-    <TextView android:id="@+id/tvAudio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Suara: default alarm" android:textColor="#777980"/>
-    <CheckBox android:id="@+id/cbVibrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Getar" android:checked="true"/>
-    <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="18dp" android:background="@drawable/bg_button" android:text="Simpan Alarm ✨" android:textAllCaps="false" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Nama Rutinitas" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <EditText android:id="@+id/etLabel" android:layout_width="match_parent" android:layout_height="56dp" android:hint="Mis. Skincare malam" android:background="@drawable/bg_card" android:paddingHorizontal="16dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Kategori" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <Spinner android:id="@+id/spCategory" android:layout_width="match_parent" android:layout_height="58dp" android:background="@drawable/bg_card"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Suara Alarm" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <Button android:id="@+id/btnRecord" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:background="@drawable/bg_button_lav" android:text="🎙 Rekam suara sendiri" android:textAllCaps="false"/>
+    <Button android:id="@+id/btnPickAudio" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:background="@drawable/bg_card" android:text="🎵 Pilih dari perangkat" android:textAllCaps="false"/>
+    <TextView android:id="@+id/tvAudio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_chip" android:text="▶ Suara default alarm" android:textColor="@color/muted"/>
+    <CheckBox android:id="@+id/cbVibrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Getar" android:checked="true"/>
+    <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="16dp" android:background="@drawable/bg_button" android:text="Simpan Alarm ✨" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold"/>
 </LinearLayout>
 </ScrollView>

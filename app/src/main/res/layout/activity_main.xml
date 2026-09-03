@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="20dp" android:background="@color/cream">
+    android:orientation="vertical" android:background="@color/cream">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="PAPAlarm ✨" android:textSize="30sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_marginTop="4dp" android:text="Rutinitasku" android:textSize="16sp" android:textColor="#6A6A72"/>
-
-    <TextView android:id="@+id/tvSummary" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginTop="18dp" android:background="@drawable/bg_card" android:text="Belum ada rutinitas hari ini 🌙"
-        android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp" android:background="@drawable/bg_header">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🌙  PAPAlarm" android:textSize="30sp" android:textStyle="bold" android:textColor="@color/soft_pink_dark"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="Rutinitas kecil, hidup lebih baik ✨" android:textSize="15sp" android:textColor="@color/forest_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="Rutinitasku" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
+        <TextView android:id="@+id/tvSummary" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:text="Belum ada rutinitas hari ini 🌷"
+            android:textSize="14sp" android:textColor="@color/forest_text"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
-        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp"/>
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="14dp" android:clipToPadding="false"/>
 
-    <Button android:id="@+id/btnAdd" android:layout_width="match_parent" android:layout_height="58dp"
-        android:background="@drawable/bg_button" android:text="＋ Tambah Alarm" android:textAllCaps="false"
-        android:textSize="17sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="76dp" android:gravity="center"
+        android:orientation="horizontal" android:background="@drawable/bg_bottomnav" android:paddingHorizontal="12dp">
+        <Button android:id="@+id/btnHome" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+            android:text="🌷\nRutinitas" android:textAllCaps="false" android:textSize="11sp" android:background="@drawable/bg_chip" android:textColor="@color/soft_pink_dark"/>
+        <Button android:id="@+id/btnAdd" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+            android:layout_marginHorizontal="8dp" android:text="＋\nTambah" android:textAllCaps="false" android:textSize="11sp" android:background="@drawable/bg_button" android:textColor="@color/white"/>
+        <Button android:id="@+id/btnSettings" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1"
+            android:text="⚙️\nPengaturan" android:textAllCaps="false" android:textSize="11sp" android:background="@drawable/bg_card" android:textColor="@color/forest_text"/>
+    </LinearLayout>
 </LinearLayout>

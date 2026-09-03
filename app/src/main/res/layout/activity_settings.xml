@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cream">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+    <TextView android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="←  Pengaturan" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_card" android:text="📸 Kamera untuk mematikan alarm\n\n◉ Kamera depan\n○ Kamera belakang" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="🌷 Simpan foto bukti\n\n◉ Jangan simpan (disarankan)\n○ Simpan ke penyimpanan aplikasi" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="💤 Snooze default\n\n◉ 5 menit\n○ 10 menit" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="🎨 Tema\nPastel 🌸" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="☁️ Backup & Restore\nSegera hadir" android:textSize="15sp" android:textColor="@color/forest_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:text="💗 Tentang PAPAlarm\nAlarm rutinitas yang harus PAP dulu ✨" android:textSize="15sp" android:textColor="@color/forest_text"/>
+</LinearLayout>
+</ScrollView>

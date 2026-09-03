@@ -31,7 +31,8 @@ class AddAlarmActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityAddAlarmBinding.inflate(layoutInflater); setContentView(b.root)
-        b.spCategory.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listOf("Self Care","Ibadah","Kesehatan","Rumah","Belajar","Hewan","Lainnya"))
+        b.spCategory.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listOf("🧴 Self Care","📖 Ibadah","💗 Kesehatan","🏡 Rumah","📚 Belajar","🐾 Hewan","✨ Lainnya"))
+        b.btnBack.setOnClickListener { finish() }
         b.btnPickAudio.setOnClickListener { audioPicker.launch(arrayOf("audio/*")) }
         b.btnRecord.setOnClickListener { if (recording) stopRecording() else micPermission.launch(Manifest.permission.RECORD_AUDIO) }
         b.btnSave.setOnClickListener { saveAlarm() }
@@ -67,7 +68,7 @@ class AddAlarmActivity : AppCompatActivity() {
         val days = dayViews.mapIndexedNotNull { i, cb -> dayVals[i].takeIf { cb.isChecked } }.toSet()
         val alarm = AlarmItem(
             id = (System.currentTimeMillis() % Int.MAX_VALUE).toInt(), hour = b.timePicker.hour, minute = b.timePicker.minute,
-            label = label, category = b.spCategory.selectedItem.toString(), days = days, enabled = true,
+            label = label, category = b.spCategory.selectedItem.toString().substringAfter(" "), days = days, enabled = true,
             audioUri = selectedAudio, vibrate = b.cbVibrate.isChecked
         )
         val list = AlarmStore.load(this); list.add(alarm); AlarmStore.save(this, list); AlarmScheduler.schedule(this, alarm)

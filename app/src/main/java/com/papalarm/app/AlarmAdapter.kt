@@ -19,8 +19,9 @@ class AlarmAdapter(
 
     inner class Holder(private val b: ItemAlarmBinding) : RecyclerView.ViewHolder(b.root) {
         fun bind(a: AlarmItem) {
+            b.tvIcon.text = emoji(a.category)
             b.tvTime.text = String.format(Locale.getDefault(), "%02d:%02d", a.hour, a.minute)
-            b.tvLabel.text = "${emoji(a.category)} ${a.label}"
+            b.tvLabel.text = a.label
             b.tvDays.text = daysText(a.days)
             b.switchEnabled.setOnCheckedChangeListener(null)
             b.switchEnabled.isChecked = a.enabled
@@ -36,6 +37,6 @@ class AlarmAdapter(
         if (d.isEmpty()) return "Sekali"
         if (d.size == 7) return "Setiap hari"
         val names = mapOf(Calendar.MONDAY to "Sen", Calendar.TUESDAY to "Sel", Calendar.WEDNESDAY to "Rab", Calendar.THURSDAY to "Kam", Calendar.FRIDAY to "Jum", Calendar.SATURDAY to "Sab", Calendar.SUNDAY to "Min")
-        return listOf(Calendar.MONDAY,Calendar.TUESDAY,Calendar.WEDNESDAY,Calendar.THURSDAY,Calendar.FRIDAY,Calendar.SATURDAY,Calendar.SUNDAY).filter { it in d }.joinToString(" • ") { names[it]!! }
+        return listOf(Calendar.MONDAY,Calendar.TUESDAY,Calendar.WEDNESDAY,Calendar.THURSDAY,Calendar.FRIDAY,Calendar.SATURDAY,Calendar.SUNDAY).filter { it in d }.joinToString(", ") { names[it]!! }
     }
 }
